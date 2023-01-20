@@ -20,7 +20,9 @@ export class ProductComponent {
     this.getProducts();
   }
   getProducts(){
-    this.productService.getProducts().subscribe(response=>{this.products = response.data})
+    this.productService.getProducts().subscribe(response=>{
+    this.products = response.data;
     this.dataLoaded = true;
+  })
   }
 }
